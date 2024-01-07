@@ -9,11 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.0.4",
+    "@tanstack/react-table": "^8.11.3",
+    "chart.js": "^4.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.304.0",
     "next": "13.5.6",
     "react": "^18.3.0-canary-493f72b0a-20230727",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.0-canary-8039e6d0b-20231026",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7"
