@@ -22,9 +22,11 @@
     "clsx": "^2.1.0",
     "lucide-react": "^0.304.0",
     "next": "13.5.6",
+    "next-themes": "^0.2.1",
     "react": "^18.3.0-canary-493f72b0a-20230727",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.0-canary-8039e6d0b-20231026",
+    "react-icons": "^4.12.0",
     "tailwind-merge": "^2.2.0",
     "tailwindcss-animate": "^1.0.7"
   },
