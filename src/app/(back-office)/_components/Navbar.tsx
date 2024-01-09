@@ -12,13 +12,17 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { ModeToggle } from './ModeToggle'
+import { Logo } from './Logo'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className=" border-s;ate-600 fixed  top-0 flex h-16 w-full items-center  justify-between overflow-hidden border-2 bg-slate-200 px-24 py-4  text-slate-50 dark:bg-slate-800">
+    <div className=" fixed top-0 flex  h-16 w-full items-center justify-between  overflow-hidden border-2 border-slate-600 bg-slate-200 px-24 py-4 text-slate-50 dark:bg-slate-800">
       <div className="flex">
+        <Logo />
+      </div>
+      <div className="flex w-full pl-24">
         <button>
           <Menu className="text-slate-800 dark:text-slate-100" />
         </button>
