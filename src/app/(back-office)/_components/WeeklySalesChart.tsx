@@ -96,14 +96,16 @@ const WeeklySalesChart = (props: Props) => {
         <TabsTrigger value="password">Orders</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
-        <div className=" w-full rounded-lg bg-slate-700 p-4">
-          <h2 className="text-xl font-bold">Weekly Sales Chart</h2>
+        <div className=" w-full rounded-lg p-4 dark:bg-slate-700">
+          <h2 className="text-xl font-bold text-blue-800 dark:text-slate-800">
+            Weekly Sales Chart
+          </h2>
           {/* Chart */}
           <Line options={options} data={data} />
         </div>
       </TabsContent>
       <TabsContent value="password">
-        <div className=" w-full rounded-lg bg-slate-700 p-4">
+        <div className=" w-full rounded-lg bg-slate-200 p-4 text-slate-800 dark:bg-slate-700 dark:text-slate-100">
           <h2 className="text-xl font-bold">Best Selling Products Chart</h2>
           {/* Chart */}
           <Pie data={data2} />

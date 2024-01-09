@@ -29,7 +29,9 @@ export default async function Dashboard() {
 
       <section className="py-24">
         <div className="container">
-          <h1 className="text-3xl font-bold">All Users</h1>
+          <h1 className="text-3xl font-bold  text-slate-800 dark:text-slate-100">
+            All Users
+          </h1>
           <DataTable columns={columns} data={data} />
         </div>
       </section>

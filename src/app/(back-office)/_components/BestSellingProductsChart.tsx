@@ -35,7 +35,7 @@ const data = {
 
 const BestSellingProductsChart = (props: Props) => {
   return (
-    <div className="mx-auto w-2/3 rounded-lg bg-slate-700 p-4">
+    <div className="mx-auto w-2/3 rounded-lg bg-slate-200 p-4 text-slate-800 dark:bg-slate-700 dark:text-slate-100">
       <h2 className="text-xl font-bold">Best Selling Products Chart</h2>
       {/* Chart */}
       <Pie data={data} />

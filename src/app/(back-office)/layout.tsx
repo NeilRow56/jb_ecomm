@@ -13,7 +13,7 @@ export default function MarketingLayout({
       <div className="w-full ">
         {/* Header */}
         <Navbar />
-        <main className="ml-60 mt-16 min-h-screen  bg-slate-900 p-8 text-slate-50">
+        <main className="ml-60 mt-16 min-h-screen  bg-slate-100 p-8 text-slate-50 dark:bg-slate-900">
           {children}
         </main>
       </div>

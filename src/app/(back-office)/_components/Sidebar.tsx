@@ -5,7 +5,7 @@ type Props = {}
 
 const Sidebar = (props: Props) => {
   return (
-    <div className=" fixed left-0 top-16 min-h-screen w-60 space-y-6 bg-slate-700 p-3 text-slate-50">
+    <div className=" fixed left-0 top-16 min-h-screen w-60 space-y-6 bg-slate-200 p-3 text-slate-800  dark:bg-slate-700 dark:text-slate-100">
       <Link className="mb-6 " href="#">
         Logo
       </Link>

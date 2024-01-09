@@ -11,33 +11,32 @@ import {
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { ModeToggle } from './ModeToggle'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className=" fixed top-0  flex h-16 w-full items-center justify-between  overflow-hidden bg-slate-800 px-24  py-4 text-slate-50">
+    <div className=" border-s;ate-600 fixed  top-0 flex h-16 w-full items-center  justify-between overflow-hidden border-2 bg-slate-200 px-24 py-4  text-slate-50 dark:bg-slate-800">
       <div className="flex">
         <button>
-          <Menu />
+          <Menu className="text-slate-800 dark:text-slate-100" />
         </button>
       </div>
       <div className="flex space-x-8">
-        <button>
-          <Sun />
-        </button>
+        <ModeToggle />
 
         <DropdownMenu>
           <DropdownMenuTrigger>
             <div className="flex items-center">
-              <Bell />
+              <Bell className="text-slate-800 dark:text-lime-500" />
 
               <span className="absolute right-[187px] top-[6px] flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-sm text-white">
                 5
               </span>
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-[350px] bg-slate-800 px-4 py-2 pr-4 text-slate-200">
+          <DropdownMenuContent className="w-[350px] px-4 py-2 pr-4 text-slate-200 dark:bg-slate-800">
             <DropdownMenuLabel>Notifications</DropdownMenuLabel>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer">
