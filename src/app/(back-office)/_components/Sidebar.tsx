@@ -66,9 +66,17 @@ const Sidebar = (props: Props) => {
       <div className="flex flex-col space-y-8">
         <Link
           href="/dashboard"
-          className="flex items-center space-x-3 px-6 py-2"
+          className={cn(
+            'flex items-center space-x-3 px-6 py-2',
+            pathName === '/dashboard' && 'border-l-4 border-green-600'
+          )}
         >
-          <span className="flex gap-4">
+          <span
+            className={cn(
+              'flex gap-4',
+              pathName === '/dashboard' && 'text-green-600'
+            )}
+          >
             <LayoutGrid />
             Dashboard
           </span>
