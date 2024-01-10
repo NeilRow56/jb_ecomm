@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+
 import { cn } from '@/lib/utils'
 import {
   Folders,
@@ -18,6 +19,7 @@ import {
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import React from 'react'
+import { DropdownMenuCat } from '../dashboard/(catalogue)/_components/DropdownCat'
 
 const routes = [
   {
@@ -81,12 +83,11 @@ const Sidebar = (props: Props) => {
             Dashboard
           </span>
         </Link>
-        <Link href="#" className="flex items-center space-x-3  px-6 py-2">
+        <div className="flex items-center space-x-3  px-6 py-2">
           <span className="flex gap-4">
-            <Slack />
-            Catalogue
+            <DropdownMenuCat />
           </span>
-        </Link>
+        </div>
         {routes.map((route, i) => (
           <Link
             key={i}
