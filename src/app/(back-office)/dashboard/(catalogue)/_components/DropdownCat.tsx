@@ -1,22 +1,6 @@
 'use client'
 
-import {
-  ArrowDown,
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
-} from 'lucide-react'
+import { ArrowDown, User } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -25,16 +9,12 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
+import { useState } from 'react'
 
 const catelogueLinks = [
   {
@@ -66,6 +46,7 @@ const catelogueLinks = [
 
 export function DropdownMenuCat() {
   const pathname = usePathname()
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

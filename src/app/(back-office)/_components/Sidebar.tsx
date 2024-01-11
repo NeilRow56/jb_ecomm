@@ -10,15 +10,13 @@ import {
   PersonStanding,
   Settings,
   ShoppingCart,
-  Slack,
   Tractor,
-  User2,
   Users2,
   Warehouse,
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import React from 'react'
+import React, { useState } from 'react'
 import { DropdownMenuCat } from '../dashboard/(catalogue)/_components/DropdownCat'
 
 const routes = [
@@ -63,8 +61,9 @@ type Props = {}
 
 const Sidebar = (props: Props) => {
   const pathName = usePathname()
+
   return (
-    <div className=" fixed left-0 min-h-screen w-60 space-y-6 bg-slate-200  pt-24 text-slate-800  dark:bg-slate-700 dark:text-slate-100">
+    <div className=" fixed left-0 hidden min-h-screen w-60 space-y-6 bg-slate-200 pt-24  text-slate-800 lg:block  dark:bg-slate-700 dark:text-slate-100">
       <div className="flex flex-col space-y-8">
         <Link
           href="/dashboard"

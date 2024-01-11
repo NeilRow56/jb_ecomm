@@ -18,7 +18,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
   return (
-    <div className=" fixed top-0 flex  h-16 w-full items-center justify-between  overflow-hidden border-2 border-slate-600 bg-slate-200 px-24 py-4 text-slate-50 dark:bg-slate-800">
+    <div className=" fixed top-0  flex h-16 w-full items-center  justify-between overflow-hidden border-2 border-slate-600 bg-slate-200 py-4 text-slate-50 md:px-12 lg:px-24 dark:bg-slate-800">
       <div className="flex">
         <Logo />
       </div>
@@ -35,7 +35,7 @@ const Navbar = (props: Props) => {
             <div className="flex items-center">
               <Bell className="text-slate-800 dark:text-lime-500" />
 
-              <span className="absolute right-[187px] top-[6px] flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-sm text-white">
+              <span className="absolute right-[180px] top-[7px] flex h-5 w-5 items-center justify-center rounded-full bg-red-700 text-sm text-white">
                 5
               </span>
             </div>
@@ -135,7 +135,7 @@ const Navbar = (props: Props) => {
               src="/profile.jpg"
               width={200}
               height={200}
-              className="h-8 w-8 rounded-full"
+              className="h-8 w-12 rounded-full"
               alt="profile picture"
             />
           </DropdownMenuTrigger>
