@@ -46,7 +46,7 @@ export const data = {
   datasets: [
     {
       label: 'Sales',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      data: labels.map(() => faker.number.int({ min: 0, max: 1000 })),
       borderColor: 'rgb(255, 99, 132)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
