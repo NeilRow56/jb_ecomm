@@ -1,5 +1,6 @@
 import { deleteCategory } from '@/actions/deleteCategory'
-import { Button } from '@/components/ui/button'
+
+import { FormDelete } from './form-delete'
 
 type CategoryProps = {
   title: string
@@ -14,9 +15,7 @@ export const Category = ({ title, id }: CategoryProps) => {
       className="flex items-center justify-between gap-x-2"
     >
       <p>Category name:{title}</p>
-      <Button type="submit" variant="destructive">
-        Delete
-      </Button>
+      <FormDelete />
     </form>
   )
 }

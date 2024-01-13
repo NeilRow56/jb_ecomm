@@ -8,3 +8,8 @@ import {
   useFormState as undefined_useFormState,
   useFormStatus as undefined_useFormStatus,
 } from 'react-dom'
+
+export const useFormState =
+  experimental_useFormState as typeof undefined_useFormState
+export const useFormStatus =
+  experimental_useFormStatus as typeof undefined_useFormStatus
