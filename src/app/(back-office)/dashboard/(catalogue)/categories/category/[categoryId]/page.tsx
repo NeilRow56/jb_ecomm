@@ -1,16 +1,17 @@
-import { db } from '@/lib/db'
-import { Category } from './category'
-import { Form } from './form'
+import { Separator } from '@/components/ui/separator'
+import Info from '../../../_components/Info'
+import CategoryList from '../../../_components/CategoryList'
+import { Suspense } from 'react'
 
 const CategoryIdPage = async () => {
-  const categories = await db.category.findMany()
   return (
-    <div className="flex  h-screen flex-col  items-center justify-center  bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-400 to-slate-800">
-      <Form />
-      <div className="space-y-2 rounded-lg border-2 border-gray-300 p-2 text-orange-400">
-        {categories.map((category) => (
-          <Category key={category.id} id={category.id} title={category.title} />
-        ))}
+    <div className="mb-20 mt-24 w-full bg-slate-200">
+      <Info />
+      <Separator className="my-4" />
+      <div className="px-2 md:px-4">
+        <Suspense fallback={<CategoryList.Skeleton />}>
+          <CategoryList />
+        </Suspense>
       </div>
     </div>
   )
