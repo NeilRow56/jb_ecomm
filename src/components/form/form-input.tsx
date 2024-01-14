@@ -45,9 +45,9 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
           {label ? (
             <Label
               htmlFor={id}
-              className="text-xs font-semibold text-neutral-700"
+              className="text-xs font-semibold text-slate-900"
             >
-              Label
+              {label}
             </Label>
           ) : null}
           <Input
@@ -60,7 +60,10 @@ export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
             placeholder={placeholder}
             type={type}
             disabled={pending || disabled}
-            className={cn('h-7 px-2 py-1 text-sm', className)}
+            className={cn(
+              'h-7 bg-slate-300 px-2 py-1 text-sm text-slate-900',
+              className
+            )}
             aria-describedby={`${id}-error`}
           />
         </div>

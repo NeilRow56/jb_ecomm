@@ -2,9 +2,9 @@
 
 import { createCategory } from '@/actions/create-category'
 
-import { FormInput } from './form-input'
-import { FormButton } from './form-buton'
 import { useAction } from '@/hooks/use-action'
+import { FormInput } from '@/components/form/form-input'
+import { FormSubmit } from '@/components/form/form-submit'
 
 export const Form = () => {
   const { execute, fieldErrors } = useAction(createCategory, {
@@ -24,10 +24,10 @@ export const Form = () => {
   return (
     <form action={onSubmit}>
       <div className="flex flex-col space-y-2">
-        <FormInput errors={fieldErrors} />
+        <FormInput label="Category Title" id="title" errors={fieldErrors} />
       </div>
 
-      <FormButton />
+      <FormSubmit>Save</FormSubmit>
     </form>
   )
 }
