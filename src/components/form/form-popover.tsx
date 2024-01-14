@@ -1,5 +1,6 @@
 'use client'
 
+import { ElementRef, useRef } from 'react'
 import {
   Popover,
   PopoverContent,
@@ -12,6 +13,7 @@ import { FormSubmit } from './form-submit'
 import { Button } from '../ui/button'
 import { X } from 'lucide-react'
 import { toast } from 'sonner'
+import { useRouter } from 'next/navigation'
 
 import { useAction } from '@/hooks/use-action'
 import { createCategory } from '@/actions/create-category'
@@ -29,9 +31,13 @@ export const FormPopover = ({
   align,
   sideOffset = 0,
 }: FormPopoverProps) => {
+  const router = useRouter()
+  const closeRef = useRef<ElementRef<'button'>>(null)
   const { execute, fieldErrors } = useAction(createCategory, {
     onSuccess: (data) => {
       toast.success('Category created!')
+      closeRef.current?.click()
+      router.push(`/category/${data.id}`)
     },
     onError: (error) => {
       toast.error(error)
@@ -57,7 +63,7 @@ export const FormPopover = ({
         <div className="pb-4 text-center text-sm font-medium text-slate-100">
           Create category
         </div>
-        <PopoverClose asChild>
+        <PopoverClose ref={closeRef} asChild>
           <Button
             className="absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600"
             variant="ghost"
